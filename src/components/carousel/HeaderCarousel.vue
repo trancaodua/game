@@ -73,7 +73,6 @@ export default {
     this.interval = setInterval(this.run, 2000);
   },
   unmounted() {
-    alert("The component is removed (unmounted)!");
     clearInterval(this.interval);
   },
   methods: {
@@ -89,7 +88,6 @@ export default {
         this.idx = this.data.length - 1;
       }
       this.transform = `translateX(${-this.idx * this.imgs.offsetWidth}px)`;
-      console.log(this.idx);
     }
   }
 }
