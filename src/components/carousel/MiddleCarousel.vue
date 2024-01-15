@@ -130,59 +130,6 @@ export default {
 </script>
   
 <style scoped>
-.title {
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    padding: 0 1em;
-    color: #5c5c5c;
-    font-weight: 500;
-    font-size: 1.2em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.sub-left-title {
-    display: flex;
-    align-items: center;
-}
-
-.title-icon-cp {
-    background-position: -0.07em -0.07em;
-    margin-right: 0.55em;
-    margin-left: 0.3em;
-    width: 1.3em;
-    height: 1.3em;
-    background-image: url(https://www.123bcc.com/home/static-game/img/icon_sprites_lobby.323f0720.png);
-    background-position: 0 -0.08em;
-    background-size: auto 1.45em;
-    display: block;
-}
-
-.sub-right-title {
-    font-size: 0.75em;
-    font-weight: 400;
-    padding-right: 1.2em;
-    padding-top: 0.5em;
-    position: relative;
-}
-
-.sub-right-title::after {
-    content: "";
-    display: block;
-    width: 0.9em;
-    height: 0.9em;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAFAAAAACy3fD9AAAC+0lEQVQ4Ec1UTUhUURQ+974ZZ0T8eTNgVLugRYsWRSItEqKiMMJwpqRUoh8YVHR0RFtJLgIj0BEXGkVlQeqoM1IQ0cKgTS2CIhSKCgpSIah55ljjz/Pezpnxvp7T1LoDb8553znnu987994B+N+NKYGnehc3LYvlVwBsIhbyNCicvK8n/kQCuHMd+pF7TWzBnsuMuQXkijVkzwcp6yvD8XYLx4DIEN+bNI2hTil/99iL1mMrORwo+MqA1wBjkgno8nXHy1W95uTViH9D0qPTPUaXwrN5i5CS4yH9PmPQIQFVMDlcFU7sIHyssegjZ8yP4zAFyHZ/OF5NeDazZmhP4swiUsqTSP7e5dZKh+qLDMr7wvE6KWQ/Ni05NEdZpLnwhb2P4g0KVdKbp5/FT3wpJWxfSq5FToxKjXLRFs8AY+wazdQU5kRN+Mdm1aN8VsLrAfYzxyWPA4MvWHhIzMS7VQMu1oSLPcXFtibl0kRjn3SpHPmshJQYafB+5hpUMmAr2Bz0hY1zhONiq648hx9JPyFeOmcaNwhX9ldCKhgPep8BZ3WpYiEHfH3GLopTJ4JDBc54EWddi7O1zu0/CalZOmESXQJ3PgdMWUoYGd+iv0WFb1IvAvalPOEqyOZP98/rsCIeYS4fd3YS53eT6lAVEzPGbQxL8JlzumUb4WSp3UuHG39p2PPLyYeI7sGdnXI7PYcHG1iSqqaLgleQlEaRcAI/GAl63hFOllUhKZg1jUH8zDKc06zb4S5Xd3j9LF7ERVY1TfNFWvXXaar0b1aF04XBq/hdASRbwCtzYKS54AOV44E/hu4OPhw4vxBt0WOE2+0PhbRjqLCNFDBNqxwLeaaooar3ewkqHsGcxhi/FGvRB+1EKt5w9fw9RgU2xOguo4Qz4636XSr0hee3SbH2HMNibLgVbfWeVwSZ3lJYO5AoFiCGiAwY71BkqQYhRtNk7PHO3Z5AJon93aFeTC7xjwRm8GY8iIb0ywonj3d3Fl2cu3V/535m2nOZ8S9QDB5yYzxDrwAAAABJRU5ErkJggg==);
-    background-size: cover;
-    position: absolute;
-    right: 0.2em;
-    top: 0.5em;
-}
-
-/* .box-container {
-  margin: 0 15px;
-} */
 .box-content {
     cursor: grab;
     overflow: hidden;
