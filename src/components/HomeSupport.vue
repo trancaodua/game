@@ -24,5 +24,6 @@
     width: 44px;
     height: 44px;
     cursor: pointer;
+    transform: translate(-10px, -10px);
 }
 </style>
