@@ -10,7 +10,6 @@ import AboutMenu from './AboutMenu.vue';
 import HomeSupport from './HomeSupport.vue';
 </script>
 
-
 <template>
     <div class="main">
         <HaderCarousel />
