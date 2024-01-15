@@ -199,6 +199,7 @@ export default {
     text-align: center;
     margin-top: 1.077em;
     margin-bottom: 1.8464em;
+    cursor: pointer;
 }
 
 .mini-carousel-button {

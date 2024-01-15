@@ -71,6 +71,7 @@ body {
   padding-right: 1.2em;
   padding-top: 0.5em;
   position: relative;
+  cursor: pointer;
 }
 
 .sub-right-title::after {

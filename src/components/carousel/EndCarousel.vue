@@ -239,6 +239,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .mini-carousel-body-two {

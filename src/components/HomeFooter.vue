@@ -48,6 +48,7 @@ footer li {
   flex-direction: column;
   align-items: center;
   padding: 0.352em 0;
+  cursor: pointer;
 }
 
 footer i {

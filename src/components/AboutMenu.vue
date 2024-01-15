@@ -160,7 +160,7 @@
 }
 
 .description {
-    padding: 2.3em 1.05em 4em 1.05em;
+    padding: 2.3em 1.05em 1em 1.05em;
     color: #b9b9b9;
     font-size: 1.25em;
 }
