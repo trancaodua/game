@@ -29,7 +29,6 @@ import HomeSupport from './HomeSupport.vue';
 </template>
 
 <script>
-import { ref } from 'vue'
 
 export default {
     data() {
