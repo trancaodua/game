@@ -8,7 +8,7 @@ import MainCarousel from './carousel/MainCarousel.vue';
 import EndCarousel from './carousel/EndCarousel.vue';
 import AboutMenu from './AboutMenu.vue';
 import HomeSupport from './HomeSupport.vue';
-</script >
+</script>
 
 
 <template>
