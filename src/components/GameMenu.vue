@@ -56,6 +56,7 @@
     height: auto;
     flex-grow: 1;
     flex-shrink: 1;
+    cursor: pointer;
 }
 
 .game-menu-icon {
