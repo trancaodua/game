@@ -1,39 +1,40 @@
 <template>
-           <div class="box-container">
-            <div class="title">
-                <div class="sub-left-title">
-                    <i class="title-icon-live"></i>
-                    <span>LIVE CASINO</span>
-                </div>
-                <div class="sub-right-title">
-                    <span>xem thêm</span>
-                </div>
+    <div class="box-container">
+        <div class="title">
+            <div class="sub-left-title">
+                <i class="title-icon-live"></i>
+                <span>LIVE CASINO</span>
             </div>
-            <div class="mini-carousel">
-                <div :style="{ transform: transform }" ref ="miniImgs" class="mini-carousel-container" id="mini-carousel-container-two">
-                    <div v-for="item in data" :key="item.key" class="mini-carousel-item-container-two">
-                        <div class="mini-carousel-item-two">
-                            <div class="mini-carousel-tag-hot"></div>
-                            <div class="mini-carousel-body-two">
-                                <div class="mini-carousel-debet-two">
-                                    Phí hoàn tối đa <span>1.8</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mini-carousel-item-two" style="background-position: -0.142em -29.992em">
-                            <div class="mini-carousel-tag-hot"></div>
-                            <div class="mini-carousel-body-two">
-                                <div class="mini-carousel-debet-two">
-                                    Phí hoàn tối đa <span>1.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-                </div>
-                <div @click="prev" class="mini-carousel-button left" id="leftTwo"></div>
-                <div @click="next" class="mini-carousel-button right" id="rightTwo"></div>
+            <div class="sub-right-title">
+                <span>xem thêm</span>
             </div>
         </div>
+        <div class="mini-carousel">
+            <div :style="{ transform: transform }" ref="miniImgs" class="mini-carousel-container"
+                id="mini-carousel-container-two">
+                <div v-for="item in data" :key="item.key" class="mini-carousel-item-container-two">
+                    <div class="mini-carousel-item-two">
+                        <div class="mini-carousel-tag-hot"></div>
+                        <div class="mini-carousel-body-two">
+                            <div class="mini-carousel-debet-two">
+                                Phí hoàn tối đa <span>1.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-carousel-item-two change-postion">
+                        <div class="mini-carousel-tag-hot"></div>
+                        <div class="mini-carousel-body-two">
+                            <div class="mini-carousel-debet-two">
+                                Phí hoàn tối đa <span>1.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div @click="prev" class="mini-carousel-button left" id="leftTwo"></div>
+            <div @click="next" class="mini-carousel-button right" id="rightTwo"></div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -50,7 +51,7 @@ export default {
             {
                 key: 1,
                 class: "two"
-            },         
+            },
         ]
 
         const miniImgs = ref(null);
@@ -87,7 +88,7 @@ export default {
             this.miniIdx++;
             this.miniChangeImage();
         },
-        prev(){
+        prev() {
             this.miniIdx--;
             this.miniChangeImage();
         }
@@ -305,17 +306,19 @@ export default {
     align-items: center;
     flex-direction: row;
     padding: 0 15px;
+    gap: 2px;
 }
 
 .mini-carousel-item-two {
-    width: 11.968em;
-    height: 9.689em;
+    width: 11em;
+    height: 9em;
     overflow: hidden;
     position: relative;
     padding: 0 15px;
     background-image: url(https://www.123bcc.com/home/static-game/img/live_sprites.7cf4edaf.png);
     background-repeat: no-repeat;
-    background-size: 12.253em auto;
+    background-size: cover;
+    flex-shrink: 0;
 }
 
 .mini-carousel-body-two {
@@ -336,6 +339,23 @@ export default {
     color: #fff;
     line-height: 1.167;
     margin-bottom: 0.833em;
+}
+
+.change-postion {
+    background-position: -0.142em -26.8em;
+}
+
+@media screen and (max-width: 600px) {
+
+    .mini-carousel-item-two {
+        width: 10em;
+        height: 8em;
+    }
+
+    .change-postion {
+        background-position: -0.142em -24.3em;
+    }
+
 }
 </style>
   

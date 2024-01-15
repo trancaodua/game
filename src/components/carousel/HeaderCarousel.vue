@@ -73,7 +73,9 @@ export default {
     this.interval = setInterval(this.run, 2000);
   },
   unmounted() {
-    clearInterval(this.interval);
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   },
   methods: {
     run() {
@@ -96,7 +98,6 @@ export default {
 <style scoped>
 .carousel {
   width: 100%;
-  height: 145px;
   overflow: hidden;
   position: relative;
 }
@@ -105,12 +106,11 @@ export default {
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
-  height: 100%;
+  width: 100%;
 }
 
 .image-container img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 

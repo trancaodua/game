@@ -29,6 +29,7 @@ import AboutMenu from './AboutMenu.vue';
     flex-grow: 1;
     flex-shrink: 1;
     overflow: auto;
+    min-width: 420px;
 }
 /* End Main */
 </style>
