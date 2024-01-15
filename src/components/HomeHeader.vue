@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <div class="sub-left-header">
-      <div class="close-container">
+  <header v-if="!close">
+    <div  class="sub-left-header">
+      <div class="close-container" @click="handleClose">
         <div class="close-icon"></div>
       </div>
       <div class="phone-icon"></div>
@@ -10,6 +10,28 @@
     <div class="download-icon"></div>
   </header>
 </template>
+
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup() {
+     let close = ref(false);
+    
+
+    // expose to template and other options API hooks
+    return {
+      close 
+    }
+  },
+  methods: {
+    handleClose() {
+      this.close = true;
+    }
+  }
+}
+</script>
   
 <style scoped>
 /* Header */
@@ -39,6 +61,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .close-icon {

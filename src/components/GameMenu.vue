@@ -135,6 +135,4 @@
     transition: all 0.1s ease-in-out;
     -webkit-transform: translateX(0);
     transform: translateX(0);
-}
-
-</style>
+}</style>

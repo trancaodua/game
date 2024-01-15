@@ -7,7 +7,7 @@ import MiniCarousel from './carousel/MiniCarousel.vue';
 import MainCarousel from './carousel/MainCarousel.vue';
 import EndCarousel from './carousel/EndCarousel.vue';
 import AboutMenu from './AboutMenu.vue';
-</script>
+</script >
 
 
 <template>
@@ -17,11 +17,29 @@ import AboutMenu from './AboutMenu.vue';
         <GameMenu />
         <MiddleCarousel />
         <MiniCarousel />
-        <MainCarousel />
+        <MainCarousel :gameType="gameTypeOne" />
         <EndCarousel />
-        <AboutMenu/>
+        <MainCarousel :gameType="gameTypeTwo" />
+        <MainCarousel :gameType="gameTypeThree" />
+        <MainCarousel :gameType="gameTypeFour" />
+        <AboutMenu />
     </div>
 </template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+    data() {
+        return {
+            gameTypeOne: { name: "TRẬN CẦU ĐỈNH CAO", image: "https://www.123bcc.com/home/static-game/img/sp_sprites.68237151.png", backgroundPosition: "-10.2em -0.07em" },
+            gameTypeTwo: { name: "BẮN CÁ", image: "https://www.123bcc.com/home/static-game/img/by_sprites.cc180269.png", backgroundPosition: "-3em -0.07em" },
+            gameTypeThree: { name: "ĐÁ GÀ", image: "https://www.123bcc.com/home/static-game/img/dj_sprites.5318b20c.png", backgroundPosition: "10.2em -0.07em" },
+            gameTypeFour: { name: "GAME BÀI", image: "https://www.123bcc.com/home/static-game/img/qp_css_sprites.0d56dc9b.png", backgroundPosition: "-3em -0.07em" },
+        };
+    }
+}
+</script>
   
 <style scoped>
 /* Main */
@@ -30,6 +48,7 @@ import AboutMenu from './AboutMenu.vue';
     flex-shrink: 1;
     overflow: auto;
 }
+
 /* End Main */
 </style>
   

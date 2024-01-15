@@ -2,8 +2,8 @@
     <div class="box-container">
         <div class="title">
             <div class="sub-left-title">
-                <i class="title-icon-sp"></i>
-                <span>TRẬN CẦU ĐỈNH CAO</span>
+                <i class="title-icon-sp" :style="{ 'background-position': gameType.backgroundPosition }"></i>
+                <span>{{ gameType.name }}</span>
             </div>
             <div class="sub-right-title">
                 <span>xem thêm</span>
@@ -13,7 +13,7 @@
             <div :style="{ transform: transform }" ref="miniImgs" class="mini-carousel-container"
                 id="mini-carousel-container">
                 <div v-for="item in data" :key="item.key" class="mini-carousel-item-container">
-                    <div class="mini-carousel-item" :class="[item.class]">
+                    <div class="mini-carousel-item" :class="[item.class]" v-bind:style="{ 'background-image': 'url(' + gameType.image + ')'}">
                         <div class="mini-carousel-tag-hot"></div>
                         <div class="mini-carousel-body">
                             <div class="mini-carousel-debet">
@@ -34,16 +34,20 @@
 import { ref } from 'vue'
 
 export default {
-    setup() {
+    props: {
+        gameType: { type: Object, required: true },
+    },
+    setup(props) {
 
-        const data = [
+        const miniImgs = ref(null);
+        let miniIdx = ref(0);
+        let transform = ref("translateX(0)");
+        console.log(props.gameType);
+
+        const data = ref([
             {
                 key: 0,
                 class: "one"
-            },
-            {
-                key: 1,
-                class: "two"
             },
             {
                 key: 2,
@@ -53,18 +57,15 @@ export default {
                 key: 3,
                 class: "four"
             }
-        ]
-
-        const miniImgs = ref(null);
-        let miniIdx = ref(0);
-        let transform = ref("translateX(0)");
+        ]);
 
         // expose to template and other options API hooks
         return {
-            data,
             miniImgs,
             miniIdx,
-            transform
+            transform,
+            data,
+
         }
     },
 
@@ -88,7 +89,7 @@ export default {
             this.miniIdx++;
             this.miniChangeImage();
         },
-        prev(){
+        prev() {
             this.miniIdx--;
             this.miniChangeImage();
         }
@@ -163,7 +164,7 @@ export default {
     margin-left: 0.3em;
     width: 1.3em;
     height: 1.3em;
-    background-position: -10.2em -0.07em;
+    /* background-position: -10.2em -0.07em; */
     background-size: auto 1.45em;
 }
 
@@ -212,7 +213,7 @@ export default {
     max-width: 393px;
     background-repeat: no-repeat;
     background-size: 24.863em auto;
-    background-image: url(https://www.123bcc.com/home/static-game/img/sp_sprites.68237151.png);
+    /* background-image: url(https://www.123bcc.com/home/static-game/img/sp_sprites.68237151.png); */
     background-repeat: no-repeat;
     background-size: 24.863em auto;
 }
