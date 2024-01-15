@@ -27,13 +27,13 @@
 .broadcast-container {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     padding-left: 2.8em;
     height: 2.35em;
     background-color: #edf3ff;
     white-space: nowrap;
     font-size: 0.9rem;
     line-height: 2.25em;
+    position: relative;
 }
 
 .broadcast-container::before {

@@ -123,7 +123,7 @@ export default {
         },
         dragging(e) {
             if (!this.pressed) return;
-            e.preventDefault();
+            // e.preventDefault();
 
             if (e.targetTouches) {
                 let rect = e.target.getBoundingClientRect();

@@ -1,11 +1,11 @@
 <template>
   <div class="carousel">
-    <div class="image-container" ref="imgs" :style="{ transform: transform}">
+    <div class="image-container" ref="imgs" :style="{ transform: transform }">
       <img v-for="image in data" :key="image.key" :src="image.src" :alt="image.key" />
     </div>
     <div class="carousel-swiper">
-      <a class="icon-dot" :class="{ active: idx==index}" v-for="(image, index) in data" :key="image.key" href="#"><i
-         ></i></a>
+      <a class="icon-dot" :class="{ active: idx == index + 1 }" v-for="(image, index) in data" :key="image.key"
+        href="#"><i></i></a>
     </div>
     <div class="online-user">
       <i class="online_user_icon"></i>
@@ -57,24 +57,29 @@ export default {
     const imgs = ref(null);
     const idx = ref(0)
     const transform = "translateX(0)";
+    let interval = ref(null);
 
     // expose to template and other options API hooks
     return {
       imgs,
       idx,
       data,
-      transform
+      transform,
+      interval
     }
   },
 
   mounted() {
-    console.log(this.imgs.offsetWidth);
-    setInterval(this.run, 2000);
+    this.interval = setInterval(this.run, 2000);
+  },
+  unmounted() {
+    alert("The component is removed (unmounted)!");
+    clearInterval(this.interval);
   },
   methods: {
     run() {
-      this.idx++;
       this.changeImage();
+      this.idx++;
     },
     changeImage() {
       if (this.idx > this.data.length - 1) {
@@ -84,6 +89,7 @@ export default {
         this.idx = this.data.length - 1;
       }
       this.transform = `translateX(${-this.idx * this.imgs.offsetWidth}px)`;
+      console.log(this.idx);
     }
   }
 }
@@ -92,7 +98,7 @@ export default {
 <style scoped>
 .carousel {
   width: 100%;
-  height: 199px;
+  height: 145px;
   overflow: hidden;
   position: relative;
 }
@@ -101,6 +107,7 @@ export default {
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
 .image-container img {

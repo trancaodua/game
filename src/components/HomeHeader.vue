@@ -1,14 +1,14 @@
 <template>
-    <header>
-        <div class="sub-left-header">
-          <div class="close-container">
-            <div class="close-icon"></div>
-          </div>
-          <div class="phone-icon"></div>
-          <div class="header-text">Nhập và tải xuống ứng dụng</div>
-        </div>
-        <div class="download-icon"></div>
-      </header>
+  <header>
+    <div class="sub-left-header">
+      <div class="close-container">
+        <div class="close-icon"></div>
+      </div>
+      <div class="phone-icon"></div>
+      <div class="header-text">Nhập và tải xuống ứng dụng</div>
+    </div>
+    <div class="download-icon"></div>
+  </header>
 </template>
   
 <style scoped>
@@ -22,6 +22,8 @@ header {
   background-color: rgb(22, 107, 226);
   font-size: 1.25rem;
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
 }
 
 .sub-left-header {
@@ -71,6 +73,5 @@ header {
 }
 
 /* End Header */
-
 </style>
   

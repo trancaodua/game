@@ -23,6 +23,8 @@ nav {
             rgb(56, 128, 229),
             rgb(117, 155, 255));
     flex-shrink: 0;
+    position: sticky;
+    top: 0;
 }
 
 nav .logo {
